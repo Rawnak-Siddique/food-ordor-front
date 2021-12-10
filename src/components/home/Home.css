@@ -1,0 +1,89 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url('../image/wp4465115.jpg');
+}
+
+.home_Nav {
+    width: 100vw;
+    height: 5vh;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+.home_NavLink {
+    margin: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: #000;
+}
+.home_PopUp {
+    
+    width: 100vw;
+    height: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+.btn {
+    width: 70px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 15px;
+}
+.home_NavSide {
+    width: 300px;
+    height: 70px;
+    display: flex;
+    right: -100%;
+    transition: 850ms;
+    flex-direction: column;
+    position: relative;
+    padding: 15px;
+    align-items: center;
+    border: 1px solid #000;
+}
+.active {
+    transition: 350ms;
+    right: 0;
+}
+.home_NavSide>input {
+    margin: 5px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    background-color: seashell;
+}
+.home_NavSide>button {
+    width: 80px;
+    border-radius: 10px;
+    border: none;
+    background-color: pink;
+}
+.home_FindFood {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home_FindFoodShop {
+    margin: 10px;
+}
+.home_FindFoodShop>input {
+    border: none;
+    height: 30px;
+    border-radius: 20px;
+    margin: 2px;
+    background-color: seashell;
+}
+.home_FindFoodShop>button {
+    border-radius: 9px;
+    height: 35px;
+    padding: 5px;
+    align-items: center;
+    background-color: pink;
+}

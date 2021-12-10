@@ -1,0 +1,40 @@
+.createRestaurant {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    background-image: url('../image/wp4465115.jpg');
+}
+.createRestaurant_Form {
+    display: flex;
+    width: 400px;
+    height: 500px;
+    align-items: center;
+    border-radius: 20px;
+}
+.createRestaurant_Form>form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 360px;
+    height: 260px;
+    align-items: center;
+}
+.createRestaurant_Form>form>input {
+    width: 350px;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+}
+.createRestaurant_Form>form>button {
+    height: 30px;
+    width: 150px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+}
+.description {
+    width: 350px;
+    height: 100px;
+}

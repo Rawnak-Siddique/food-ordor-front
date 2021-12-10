@@ -1,0 +1,50 @@
+.findRestaurant {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../image/wp4465115.jpg');
+}
+.findRestaurant_Search {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.findRestaurant_Results {
+    width: 100vw;
+    height: 85vh;
+    position: fixed;
+    bottom: 0;  
+}
+.findRestaurant_Search>input {
+    width: 190px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    margin: 15px;
+    background-color: seashell;
+}
+.findRestaurant_Search>button {
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: pink;
+}
+.findRestaurant_ResultsCard {
+    width: 95vw;
+    height: 80vh;
+    padding: 30px;
+    bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.findRestaurant_ResultsCard::-webkit-scrollbar {
+    display: none;
+}

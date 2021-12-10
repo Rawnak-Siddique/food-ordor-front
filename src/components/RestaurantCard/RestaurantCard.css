@@ -1,0 +1,38 @@
+.restaurantCard {
+    width: 240px;
+    height: 280px;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    border-radius: 20px;
+}
+.restaurantCard_Top {
+    width: 240px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.restaurantCard_Top>img {
+    width: 240px;
+    height: 140px;
+}
+.restaurantCard_Top>h1 {
+    padding: 5px;
+    height: 40px;
+    width: 230px;
+    display: flex;
+    justify-content: center;
+}
+.restaurantCard_Bottom {
+    width: 240px;
+    height: 90px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
