@@ -12,7 +12,7 @@ const CreateRestaurant = () => {
         <div className="createRestaurant">
             <div className="createRestaurant_Form">
                 <form>
-                    <h1>CreateRestaurant</h1>
+                    <h1>Restaurant</h1>
                     <input type="text" placeholder="Name of Restaurant" />
                     <input type="text" placeholder="Country" />
                     <input type="text" placeholder="City" />

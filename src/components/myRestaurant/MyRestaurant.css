@@ -10,7 +10,7 @@
     padding: 10px;
 }
 .myRestaurant_Order {
-    background-color: darkolivegreen;
+    background-color: rgb(251, 162, 250);
     margin: 10px;
     width: 32vw;
     padding: 10px;
@@ -24,7 +24,7 @@
     display: none;
 }
 .myRestaurant_ItemsCreate {
-    background-color: chocolate;
+    background-color: rgb(251, 162, 250);
     width: 98%;
     height: 30%;
     padding: 5px;

@@ -7,7 +7,7 @@ const MyRestaurant = () => {
         <div className="myRestaurant" >
             <div className="myRestaurant_Items">
                 <div className="myRestaurant_ItemsCreate">
-                    <h1>create restaurant items</h1>
+                    <h1>restaurant items</h1>
                 </div>
                 <div className="myRestaurant_ItemsList">
                     {data.map((food) => {
