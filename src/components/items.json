@@ -4,47 +4,47 @@
         "img": "https://firebasestorage.googleapis.com/v0/b/food-shop-55141.appspot.com/o/files%2Fnachos.PNG?alt=media&token=bcbafd0f-3394-4bcb-9eaf-cfd231a736d2",
         "food": "Nachos",
         "price": "55.25",
-        "description": "va v iafieab  cknakbciabeihbabcaka ahhba  aibaeib",
-        "ingredients": "nona, eaea, afeava, veav, eaev"
+        "description": "These classic Tex-Mex nachos are loaded to the MAX! Avoid soggy nachos by briefly baking them before topping with cheese, seasoned beef, refried beans, guacamole, and salsa. They're a great snack, party appetizer, or even casual weeknight dinner.",
+        "ingredients": "Ground beef, refried beans, sour cream, corn, nachos"
     },
     {
         "id": 2,
         "img": "https://firebasestorage.googleapis.com/v0/b/food-shop-55141.appspot.com/o/files%2Fpexels-pixabay-315755.jpg?alt=media&token=ee5998d3-c9d3-419b-85f1-f247dec94e16",
         "food": "Pizza",
         "price": "55.25",
-        "description": "va v iafieab  cknakbciabeihbabcaka ahhba  aibaeib",
-        "ingredients": "nona, eaea, afeava, veav, eaev"
+        "description": "This is a classic homemade pizza recipe, including a pizza dough recipe, topping suggestions, and step-by-step instructions with photos. Make perfect pizza at home!",
+        "ingredients": "Italian sausage, pizza dough, pesto, feta cheese, bell peppers"
     },
     {
         "id": 3,
         "img": "https://firebasestorage.googleapis.com/v0/b/food-shop-55141.appspot.com/o/files%2Fpexels-dana-tentis-262959.jpg?alt=media&token=35a8c74f-45b1-4a7c-90d0-ae5d2cfc3dd5",
         "food": "Fish",
         "price": "55.25",
-        "description": "va v iafieab  cknakbciabeihbabcaka ahhba  aibaeib",
-        "ingredients": "nona, eaea, afeava, veav, eaev"
+        "description": "The fillets fry up perfectly cooked inside, with a beautiful golden crust. Haddock and cod are two excellent choices for our fried fish recipe, but tilapia, pollock, catfish, bass, trout, or perch will also yield a beautiful meal.",
+        "ingredients": "Tartar sauce, pound fish fillets, all purpose flour, vegetable oil"
     },
     {
         "id": 4,
         "img": "https://firebasestorage.googleapis.com/v0/b/food-shop-55141.appspot.com/o/files%2Fpexels-ella-olsson-3026808.jpg?alt=media&token=e6826e50-67c9-4f5d-988d-b8eeefcaf8af",
         "food": "Mix bowl",
         "price": "55.25",
-        "description": "va v iafieab  cknakbciabeihbabcaka ahhba  aibaeib",
-        "ingredients": "nona, eaea, afeava, veav, eaev"
+        "description": "This Mexican Chicken Bowl recipe is a super fun way to add a kick to your chicken lunch bowl. Packed with juicy grilled chicken, easy to make and very tasty and filling lunch. Bursting with flavor, nutritious and perfect for meal prep! ",
+        "ingredients": "Chicken breast, sweet corn, cherry tomatoes, avocado, rice"
     },
     {
         "id": 5,
         "img": "https://firebasestorage.googleapis.com/v0/b/food-shop-55141.appspot.com/o/files%2Fpexels-lisa-1279330.jpg?alt=media&token=759946d6-44c2-48ac-a430-67fa4a1ba4dc",
         "food": "Pasta",
         "price": "55.25",
-        "description": "va v iafieab  cknakbciabeihbabcaka ahhba  aibaeib",
-        "ingredients": "nona, eaea, afeava, veav, eaev"
+        "description": "Cook up this classic sauce in one pan, then toss with spaghetti for a simple midweek meal. It's budget-friendly too, making it a great meal for the family ",
+        "ingredients": "Pav bhaji masala, pasta, green peas, cream, bell pepper"
     },
     {
         "id": 6,
         "img": "https://firebasestorage.googleapis.com/v0/b/food-shop-55141.appspot.com/o/files%2Fpexels-pixabay-357573.jpg?alt=media&token=3b0c9836-e98d-4850-92da-de32c0371dad",
         "food": "Pancake",
         "price": "55.25",
-        "description": "va v iafieab  cknakbciabeihbabcaka ahhba  aibaeib",
-        "ingredients": "nona, eaea, afeava, veav, eaev"
+        "description": "Nothing says weekend like homemade pancakes for breakfast. Our easy recipe will help you whip them up in less than 30 minutes. Making pancake batter from scratch is so simple that you'll wonder why you never did it before!",
+        "ingredients": "Butter, egg, baking powder, all purpose flour, white sugar"
     }
 ]

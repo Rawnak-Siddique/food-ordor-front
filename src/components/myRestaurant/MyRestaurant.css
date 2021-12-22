@@ -3,7 +3,10 @@
     height: 100vh;
     display: flex;
     background-image: url('../image/wp4465115.jpg');
+    position: absolute;
+    overflow: hidden;
 }
+
 .myRestaurant_Items {
     width: 65vw;
     margin: 10px;
@@ -24,15 +27,51 @@
     display: none;
 }
 .myRestaurant_ItemsCreate {
-    background-color: rgb(251, 162, 250);
     width: 98%;
-    height: 30%;
+    height: 300px;
     padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+.myRestaurant_ItemsCreateInput {
+    display: flex;
+    padding: 5px;
+    width: 98%;
+    height: 270px;
+}
+.myRestaurant_ItemsCreateInputPic {
+    width: 350px;
+    height: 260px;
+    padding: 5px;
+    text-align: center;
+}
+.myRestaurant_ItemsCreateInputPic>img {
+    width: 150px;
+    margin: 5px;
+}
+.myRestaurant_ItemsCreateInputData {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.myRestaurant_ItemsCreateInputData>input {
+    height: 45px;
+    margin: 5px;
+    border-radius: 15px;
+    border: none;
+    background-color: white;
+}
+.myRestaurant_ItemsCreateInputData>button {
+    border-radius: 15px;
 }
 .myRestaurant_ItemsList {
+    background-color: violet;
     width: 98%;
     padding: 5px;
-    height: 67%;
+    height: 340px;
     overflow: scroll;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */

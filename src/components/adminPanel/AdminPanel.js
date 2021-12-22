@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import './Home.css';
+import './AdminPanel.css'
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../image/logo.png';
 import btn from '../image/Capture.PNG';
 import apiClient from '../axios/apiClient'
 
-const Home = () => {
+const AdminPanel = () => {
     const [sidebar, setSidebar] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -24,30 +24,30 @@ const Home = () => {
         e.preventDefault();
         navigate(`/findRestaurant/${counters}/${city}`);
     };
-    return (
-        <div className="home" >
-            <div className="home_Nav">
-                <Link to="/createRestaurant" className="home_NavLink" >Admin Sign Up</Link>
-                <button className="home_NavLink btn" onClick={popUp} >Admin Sign In</button>
+  return (
+    <div className="AdminPanel" >
+            <div className="AdminPanel_Nav">
+                <Link to="/createRestaurant" className="AdminPanel_NavLink" >Admin Sign Up</Link>
+                <button className="AdminPanel_NavLink btn" onClick={popUp} >Admin Sign In</button>
             </div>
-            <div className="home_PopUp">
-                <div className={sidebar ? "home_NavSide active" : "home_NavSide"}>
-                    <input type="text" placeholder="Enter email" onChange={(e) => (setEmail(e.target.value.toLowerCase()))} />
-                    <input type="text" placeholder="Enter password" onChange={(e) => (setPassword(e.target.value.toLowerCase()))} />
+            <div className="AdminPanel_PopUp">
+                <div className={sidebar ? "AdminPanel_NavSide active" : "AdminPanel_NavSide"}>
+                    <input type="text" placeholder="Enter email" onChange={(e) => (setEmail(e.target.value))} />
+                    <input type="text" placeholder="Enter password" onChange={(e) => (setPassword(e.target.value))} />
                     <button onClick={logIn} >Login</button>
                 </div>
             </div>
-            <div className="home_FindFood">
+            <div className="AdminPanel_FindFood">
                 <img src={logo} alt="" />
-                <h1>Foodo Ordo</h1>
-                <div className="home_FindFoodShop">
-                    <input type="text" placeholder="Enter Country" onChange={(e) => (setCounters(e.target.value.toLowerCase()))} />
-                    <input type="text" placeholder="Enter City" onChange={(e) => (setCity(e.target.value.toLowerCase()))}/>
+                <h1>Foodo Ordo Admin</h1>
+                <div className="AdminPanel_FindFoodShop">
+                    <input type="text" placeholder="Enter Country" onChange={(e) => (setCounters(e.target.value))} />
+                    <input type="text" placeholder="Enter City" onChange={(e) => (setCity(e.target.value))}/>
                     <img onClick={findRestaurant} src={btn} alt="" />
                 </div>
             </div>
         </div>
-    )
+  );
 }
 
-export default Home
+export default AdminPanel;

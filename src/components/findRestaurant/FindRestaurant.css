@@ -10,6 +10,9 @@
     align-items: center;
     justify-content: center;
 }
+.findRestaurant_Search>img {
+    width: 60px;
+}
 .findRestaurant_Results {
     width: 100vw;
     height: 85vh;
@@ -23,14 +26,6 @@
     border: none;
     margin: 15px;
     background-color: seashell;
-}
-.findRestaurant_Search>button {
-    border: none;
-    border-radius: 20px;
-    padding: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    background-color: pink;
 }
 .findRestaurant_ResultsCard {
     width: 95vw;

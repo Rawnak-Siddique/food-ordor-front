@@ -1,24 +1,24 @@
-.home {
+.AdminPanel {
     width: 100vw;
     height: 100vh;
     position: fixed;
     background-image: url('../image/wp4465115.jpg');
 }
 
-.home_Nav {
+.AdminPanel_Nav {
     width: 100vw;
     height: 5vh;
     padding: 5px;
     display: flex;
     justify-content: flex-end;
 }
-.home_NavLink {
+.AdminPanel_NavLink {
     margin: 10px;
     padding-right: 10px;
     text-decoration: none;
     color: #000;
 }
-.home_PopUp {
+.AdminPanel_PopUp {
     
     width: 100vw;
     height: 100px;
@@ -33,7 +33,7 @@
     border: none;
     border-radius: 15px;
 }
-.home_NavSide {
+.AdminPanel_NavSide {
     width: 300px;
     height: 70px;
     display: flex;
@@ -49,20 +49,20 @@
     transition: 350ms;
     right: 0;
 }
-.home_NavSide>input {
+.AdminPanel_NavSide>input {
     margin: 5px;
     width: 250px;
     border: none;
     border-radius: 10px;
     background-color: seashell;
 }
-.home_NavSide>button {
+.AdminPanel_NavSide>button {
     width: 80px;
     border-radius: 10px;
     border: none;
     background-color: pink;
 }
-.home_FindFood {
+.AdminPanel_FindFood {
     width: 100vw;
     height: 80vh;
     display: flex;
@@ -70,23 +70,23 @@
     justify-content: center;
     align-items: center;
 }
-.home_FindFood>img {
+.AdminPanel_FindFood>img {
     width: 250px;
 }
-.home_FindFoodShop {
+.AdminPanel_FindFoodShop {
     margin: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.home_FindFoodShop>input {
+.AdminPanel_FindFoodShop>input {
     border: none;
     height: 30px;
     border-radius: 20px;
     margin: 2px;
     background-color: seashell;
 }
-.home_FindFoodShop>img {
+.AdminPanel_FindFoodShop>img {
     width: 60px;
     padding: 5px;
 }

@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import apiClient from '../axios/apiClient'
 import Items from '../items/Items'
 import "./Store.css"
-import data from "../items.json"
 
 const Store = () => {
-    const param = useParams();
+    const { name, id } = useParams();
+    const [data, setData] = useState([]);
+    useEffect(() => {
+      getData();
+    }, []);
+    const getData = async () => {
+        try {
+            const result = await apiClient.get(`/get-item/${id}`);
+            console.log(result.data);
+            setData(result.data);
+        } catch (error) {
+            console.log(error.messages);
+        }
+    };
     return (
         <div className="store" >
             <div className="store_Header">
-                <h1>{param.name}</h1>
+                <h1>{name}</h1>
             </div>
             <div className="store_Items">
                 {data.map((food) => {
                     return(
                         <div key={food.id}>
-                            <Items id={food.id} img={food.img} name={food.food} price={food.price} description={food.description} list={food.ingredients} />
+                            <Items id={food.id} img={food.img} name={food.title} price={food.price} description={food.description} list={food.ingredients} />
                         </div>
                     )
                 })}
