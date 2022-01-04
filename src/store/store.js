@@ -1,5 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit';
+import foodReducer from './foodSlice';
+import userReducer from './userSlice';
 
 export const store = configureStore({
-    reducer: {},
+    reducer: {
+        food: foodReducer,
+        user: userReducer,
+    },
 });

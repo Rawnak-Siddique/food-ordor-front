@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import logo from '../image/logo.png';
 import btn from '../image/Capture.PNG';
 import apiClient from '../axios/apiClient'
+import { useDispatch } from 'react-redux';
+import { logInUser } from '../../store/userSlice';
 
 const UserPanel = () => {
     const [sidebar, setSidebar] = useState(false);
@@ -12,13 +14,17 @@ const UserPanel = () => {
     const [counters, setCounters] = useState("all");
     const [city, setCity] = useState("all");
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     const popUp = () => {
         setSidebar(!sidebar);
     };
     const logIn = async () => {
-        const id = await apiClient.get(`/log-in-restaurant/${email}/${password}`)
+        const id = await apiClient.get(`/log-in-profile/${email}/${password}`)
+        dispatch(logInUser(id.data));
         const user =id.data[0]._id;
-        navigate(`/myRestaurant/${user}`);
+        if (user) {
+            navigate(`/findRestaurant/${id.data[0].counters}/${id.data[0].city}`);
+        }
     };
     const findRestaurant = (e) => {
         e.preventDefault();
@@ -27,8 +33,8 @@ const UserPanel = () => {
   return (
     <div className="UserPanel" >
             <div className="UserPanel_Nav">
-                <Link to="/createRestaurant" className="UserPanel_NavLink" >User Sign Up</Link>
-                <button className="UserPanel_NavLink btn" onClick={popUp} >User Sign In</button>
+                <Link to="/createUser" className="UserPanel_NavLink" >User Sign In</Link>
+                <button className="UserPanel_NavLink btn" onClick={popUp} >User LigIn</button>
             </div>
             <div className="UserPanel_PopUp">
                 <div className={sidebar ? "UserPanel_NavSide active" : "UserPanel_NavSide"}>

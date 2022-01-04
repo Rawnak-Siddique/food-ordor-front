@@ -43,3 +43,17 @@
 .findRestaurant_ResultsCard::-webkit-scrollbar {
     display: none;
 }
+.findRestaurant_SearchCart {
+    width: 20vw;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    margin-right: 50px;
+}
+.findRestaurant_SearchCartImg {
+    width: 35px;
+}
+.findRestaurant_SearchCartLength {
+    font-size: 15px;
+    padding-bottom: 5px;
+}

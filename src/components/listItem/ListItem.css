@@ -1,0 +1,42 @@
+.listItem {
+    width: 750px;
+    min-width: 590px;
+    height: 150px;
+    padding: 5px;
+    display: flex;
+    border: 1px solid violet;
+    margin: 5px;
+}
+.listItem_Img {
+    width: 200px;
+    height: 140px;
+    border-right: 1px solid violet;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.listItem_Img>img {
+    width: 190px;
+    height: 130px;
+}
+.listItem_Info {
+    width: 300px;
+    height: 140px;
+    border-right: 1px solid violet;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+}
+.listItem_Remove {
+    width: 100px;
+    height: 140px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: auto;
+}
+.listItem_Remove>img {
+    width: 60px;
+}

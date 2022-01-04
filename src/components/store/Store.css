@@ -11,6 +11,7 @@
     width: 95vw;
     height: 7vh;
     margin: 12px;
+    display: flex;
 }
 .store_Items {
     width: 95vw;
@@ -23,6 +24,22 @@
     /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+}
+.store_HeaderProfile {
+    width: 20vw;
+    margin-right: auto;
+}
+.store_HeaderCart {
+    width: 20vw;
+    height: 50px;
+    margin-left: auto;
+}
+.store_HeaderCartImg {
+    width: 35px;
+}
+.store_HeaderCartLength {
+    font-size: 15px;
+    padding-bottom: auto;
 }
 .store_Items::-webkit-scrollbar {
     display: none;

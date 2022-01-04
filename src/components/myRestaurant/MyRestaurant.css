@@ -4,18 +4,30 @@
     display: flex;
     background-image: url('../image/wp4465115.jpg');
     position: absolute;
-    overflow: hidden;
+    flex-direction: row;
+    overflow: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
-
+.myRestaurant::-webkit-scrollbar {
+    display: none;
+}
+@media only screen and (max-width: 900px) {
+    .myRestaurant {
+        flex-direction: column;
+        overflow: scroll;
+    }
+}
 .myRestaurant_Items {
     width: 65vw;
     margin: 10px;
     padding: 10px;
 }
 .myRestaurant_Order {
-    background-color: rgb(251, 162, 250);
     margin: 10px;
     width: 32vw;
+    height: 700px;
     padding: 10px;
     overflow: scroll;
     /* Hide scrollbar for IE, Edge and Firefox */
@@ -66,16 +78,80 @@
 }
 .myRestaurant_ItemsCreateInputData>button {
     border-radius: 15px;
+    background-color: pink;
+}
+.myRestaurant_OrderItem {
+    width: 30vw;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid rgb(114, 15, 150);
+}
+
+.myRestaurant_OrderItem>h4 {
+    margin: 2px;
+    width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.myRestaurant_OrderItemList {
+    display: flex;
+    padding: 5px;
+    border: 1px solid rgb(241, 83, 234);
+}
+.myRestaurant_OrderItemListImg {
+    width: 150px;
+    padding: 5px;
+}
+.myRestaurant_OrderItemListImg>img {
+    width: 150px;
+}
+.myRestaurant_OrderItemListText {
+    width: 290px;
+}
+.myRestaurant_OrderItemListText>h4 {
+    margin: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .myRestaurant_ItemsList {
-    background-color: violet;
-    width: 98%;
-    padding: 5px;
-    height: 340px;
+    width: 1020px;
+    height: 360px;
+    display: flex;
+    flex-wrap: wrap;
     overflow: scroll;
+    /* Hide scrollbar for IE, Edge and Firefox */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
 .myRestaurant_ItemsList::-webkit-scrollbar {
     display: none;
+}
+.myRestaurant_ItemsListItem {
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid rebeccapurple;
+}
+.myRestaurant_ItemsListItemTop {
+    width: 500px;
+    height: 200px;
+    display: flex;
+}
+.myRestaurant_ItemsListItemTopImg{
+    width: 170px;
+    height: 170px;
+}
+.myRestaurant_ItemsListItemTopImg>img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.myRestaurant_ItemsListItemTopDate {
+    width: 330px;
+    height: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.myRestaurant_ItemsListItemTopDate>h4 {
+    margin: 3px;
 }

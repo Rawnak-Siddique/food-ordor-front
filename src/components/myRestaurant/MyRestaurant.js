@@ -16,13 +16,15 @@ const MyRestaurant = () => {
         description: '',
         ingredients: ''
     });
+    const [orders, setOrders] = useState([]);
     const [image, setImage] = useState(null);
     const [progress, setProgress] = useState(0);
     const [url, setUrl] = useState("https://szabul.edu.pk/dataUpload/863noimage.png");
     const [data, setData] = useState([]);
     useEffect(() => {
       getData();
-    }, []);
+      getOrderedData();
+    }, [restaurantId]);
     const handleSingleImage = (e) => {
         e.preventDefault();
 
@@ -83,8 +85,17 @@ const MyRestaurant = () => {
     const getData = async () => {
         try {
             const result = await apiClient.get(`/get-item/${restaurantId}`);
-            console.log(result.data);
+            
             setData(result.data);
+        } catch (error) {
+            console.log(error.messages);
+        }
+    };
+    const getOrderedData = async () => {
+        try {
+            const res = await apiClient.get(`/get-restaurant-order/${restaurantId}`);
+            console.log(res.data);
+            setOrders(res.data);
         } catch (error) {
             console.log(error.messages);
         }
@@ -111,18 +122,52 @@ const MyRestaurant = () => {
                     </div>
                 </div>
                 <div className="myRestaurant_ItemsList">
-                    {data.map((food) => {
+                    {data?.map((food) => {
                         return(
-                            <div key={food._id} >
-                                <Items id={food._id} img={food.img} name={food.title} price={food.price} description={food.description} list={food.ingredients} />
-                            </div>
+                            <div className="myRestaurant_ItemsListItem" key={food._id}>
+                                <div className="myRestaurant_ItemsListItemTop">
+                                    <div className="myRestaurant_ItemsListItemTopImg">
+                                        <img src={food.img ? food.img :"https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png"} alt="" />
+                                    </div>
+                                    <div className="myRestaurant_ItemsListItemTopDate">
+                                        <h4>Item id: {food._id}</h4>
+                                        <h4>Item Name: {food.title}</h4>
+                                        <h4>Item Price: {food.price} Taka</h4>
+                                        <h4>Item description: {food.description}</h4>
+                                        <h4>Item ingredients list:  {food.ingredients}</h4>
+                                    </div>
+                                </div>
+                            </div> 
                         )
                     })}
                 </div>
             </div>
             <div className="myRestaurant_Order">
-                <h1>order</h1>
-
+                <h1>Order list</h1>
+                {orders?.map((order) => {
+                    return(
+                        <div className="myRestaurant_OrderItem" key={order._id}>
+                            <h4>Order Number: {order._id}</h4>
+                            <h4>User address: {order.userAddress}</h4>
+                            <h4>User city: {order.userCity}</h4>
+                            <h4>User Total: {order.total} taka</h4>
+                            {order?.listItems.map((item) => {
+                                return(
+                                    <div className="myRestaurant_OrderItemList" key={item._id}>
+                                        <div className="myRestaurant_OrderItemListImg">
+                                            <img src={item.img? item.img :"https://p.kindpng.com/picc/s/79-798754_hoteles-y-centros-vacacionales-dish-placeholder-hd-png.png"} alt="" />
+                                        </div>
+                                        <div className="myRestaurant_OrderItemListText">
+                                            <h4>Item Id: {item.id}</h4>
+                                            <h4>Item Name: {item.name}</h4>
+                                            <h4>Item Price: {item.price} taka</h4>
+                                        </div>
+                                    </div>  
+                                )
+                            })}
+                        </div>  
+                    )
+                })}
             </div>
         </div>
     )

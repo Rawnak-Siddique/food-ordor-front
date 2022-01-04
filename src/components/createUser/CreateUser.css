@@ -1,0 +1,55 @@
+.createUser {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-image: url('../image/wp4465115.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.createUser_form {
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.createUser_form>h1 {
+    margin: 10px;
+}
+.createUser_form>input {
+    margin: 10px;
+    width: 300px;
+    height: 35px;
+    border-radius: 30px;
+    padding: 5px;
+    border: none;
+    background-color: seashell;
+}
+.createUser_form>button {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    color: seashell;
+    background-color: pink;
+}
+.createUser_formImg {
+    display: flex;
+}
+.createUser_formImg>img {
+    width: 150px;
+    margin: 10px;
+}
+.createUser_formData {
+    margin: 10px;
+}
+.createUser_formData>button {
+    width: 150px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    color: seashell;
+    background-color: pink;
+}

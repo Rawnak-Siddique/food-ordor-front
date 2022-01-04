@@ -36,6 +36,7 @@
     margin: 5px;
     border: none;
     border-radius: 10px;
+    background-color: pink;
 }
 .description {
     width: 350px;
