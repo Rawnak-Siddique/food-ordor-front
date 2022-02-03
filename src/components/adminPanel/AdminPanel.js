@@ -40,7 +40,7 @@ const AdminPanel = () => {
             </div>
             <div className="AdminPanel_FindFood">
                 <img src={logo} alt="" />
-                <h1>Foodo Ordo Admin</h1>
+                <h1>Hungry boy Admin</h1>
                 <div className="AdminPanel_FindFoodShop">
                     <input type="text" placeholder="Enter Country" onChange={(e) => (setCounters(e.target.value))} />
                     <input type="text" placeholder="Enter City" onChange={(e) => (setCity(e.target.value))}/>

@@ -20,7 +20,7 @@ const Home = () => {
             </div>
             <div className="home_FindFood">
                 <img src={logo} alt="" />
-                <h1>Foodo Ordo</h1>
+                <h1>Hungry boy</h1>
 
                 <div className="home_FindFoodShop">
                     <input type="text" placeholder="Enter Country" onChange={(e) => (setCounters(e.target.value.toLowerCase()))} />
