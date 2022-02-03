@@ -9,12 +9,12 @@ const Avatar = () => {
         dispatch(logOutUser());
     };
     const user = useSelector(getUser);
-    console.log(user);
+    console.log("user", user);
   return (
     <div className="avatar">
-      <img src="https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture-986x1024.jpg" alt="" />
+      <img src={ user ? user[0]?.img :"https://bestprofilepictures.com/wp-content/uploads/2021/04/Cool-Profile-Picture-986x1024.jpg"} alt="" />
       <div className="avatar_data">
-          <p>name: { user ? user[0]?.name : "name"}</p>
+          <p>User name: { user ? user[0]?.name : "name"}</p>
           <p>email: { user ? user[0]?.email : "email"}</p>
           <button onClick={logOut} >log out</button>
       </div>

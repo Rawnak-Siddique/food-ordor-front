@@ -11,7 +11,16 @@ export const foodSlice = createSlice({
             state.basket.push(action.payload);
             state.total += action.payload.price;
         },
-        removeFromBasket: (state, action) => {},
+        removeFromBasket: (state, action) => {
+            const index = action.payload;
+            const newBasket = [...state.basket]
+            if(index >= 0){
+                newBasket.splice(index, 1);
+            }else {
+                console.alertS(`Cant remove product (id: ${action.id}) as its not in basket`)
+            }
+            state.basket = newBasket;
+        },
     },
 });
 

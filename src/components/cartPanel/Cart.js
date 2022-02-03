@@ -6,6 +6,7 @@ import { getCartItems, getCartTotal } from '../../store/foodSlice';
 import ListItem from '../listItem/ListItem';
 import apiClient from '../axios/apiClient';
 import Avatar from '../avatar/Avatar';
+import deliveryImg from '../image/u.PNG';
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Cart = () => {
   const CartTotal = useSelector(getCartTotal);
   const restaurantId = id;
   const [result, setResult] = useState({});
+  /*const [url, setUrl] = useState();*/
   const userId = '';
   const country = result[0]?.country;
   const city = result[0]?.city;
@@ -69,13 +71,18 @@ const Cart = () => {
       const id = create.data
       console.log("response is",id);
       if (id) {
-        /*navigate(`/payment/${id}`);*/
+        navigate(`/payment/${id}`);
       }
     } catch (error) {
       console.log(error.messages);
     }
   };
-
+  const goToDelivery = () => {
+    navigate("/delivery");
+  };
+  /*const openLink = () => {
+    window.open(url,"_blank");
+  }*/
   return (
     <div className='cart' >
       <div className="cart_Header">
@@ -86,7 +93,10 @@ const Cart = () => {
           <h5>Restaurant Country: {country}</h5>
           <h5>Restaurant City: {city}</h5>
           <h5>Restaurant Address: {address}</h5>
-          <button onClick={setCart} >Proceed to payment</button>
+          <div className="cart_HeaderTotalBtn">
+            <button onClick={setCart} >Proceed to payment</button>
+            <img onClick={goToDelivery} src={deliveryImg} alt="" />
+          </div>
         </div>
         <div className="cart_HeaderAddress">
           <input type="text" placeholder='Enter your address' onChange={(e) => (setArea(e.target.value.toLowerCase()))} />
@@ -105,7 +115,7 @@ const Cart = () => {
           }
         </div>
         <div className="cart_BodyMap">
-          <p>Map placeholder</p>
+          
         </div>
       </div>
     </div>

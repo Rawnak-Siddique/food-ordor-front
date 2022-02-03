@@ -2,7 +2,7 @@
     width: 100vw;
     height: 100vh;
     padding: 5px;
-    background-image: url('../image/wp4465115.jpg');
+    background-image: url('../image/Foodo\ Ordo\ Background.png');
     overflow: hidden;
     /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
@@ -22,14 +22,22 @@
     height: 200px;
     min-width: 350px;
     padding: 10px;
+    
 }
-.cart_HeaderTotal>button {
+.cart_HeaderTotalBtn {
+    display: flex;
+}
+.cart_HeaderTotalBtn>button {
     width: 200px;
     height: 50px;
     margin: 10px;
     border-radius: 20px;
     border: 1px solid pink;
-    background-color: rgb(238, 209, 214);
+    background-color: rgb(241, 166, 178);
+    font-weight: 600;
+}
+.cart_HeaderTotalBtn>img {
+    width: 100px;
 }
 .cart_HeaderAddress {
     width: 50vw;

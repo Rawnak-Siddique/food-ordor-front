@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom'
 import apiClient from '../axios/apiClient'
 import Items from '../items/Items'
 import IconButton from '@material-ui/core/IconButton';
-import cart from '../image/cart.jpg';
+import cart from '../image/User My Cart.PNG';
 import "./Store.css"
 import { useSelector } from 'react-redux';
 import { getCartLength } from '../../store/foodSlice';
@@ -30,13 +30,17 @@ const Store = () => {
         e.preventDefault();
         navigate(`/cart/${id}`);
     };
+    const goTOLink = () => {
+        const url = "bakbkvabkbk";
+        window.open(url, "_blank");
+    };
     return (
         <div className="store" >
             <div className="store_Header">
                 <div className="store_HeaderProfile">
                     <Avatar/>
                 </div>
-                <h1>{name}</h1>
+                <h1 onClick={goTOLink} >{name}</h1>
                 <div className="store_HeaderCart">
                     <IconButton onClick={goToCart} >
                         <img className="store_HeaderCartImg" src={cart} alt="" />

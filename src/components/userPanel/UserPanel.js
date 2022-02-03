@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './UserPanel.css'
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../image/logo.png';
+import logo from '../image/FoodoOrdo Animated Logo.Png.Png';
 import btn from '../image/Capture.PNG';
 import apiClient from '../axios/apiClient'
 import { useDispatch } from 'react-redux';

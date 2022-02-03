@@ -4,9 +4,9 @@ import RestaurantCard from "../RestaurantCard/RestaurantCard";
 import apiClient from '../axios/apiClient';
 import { useEffect, useState } from "react";
 import { useSelector } from 'react-redux';
-import btn from '../image/Capture.PNG';
+import btn from '../image/Near By Restaurants Mapping for Cherry Pick Ordering..PNG';
+import cartBtn from '../image/User My Cart.PNG';
 import { getCartLength } from "../../store/foodSlice";
-import cart from '../image/cart.jpg';
 import Avatar from "../avatar/Avatar";
 
 const FindRestaurant = () => {
@@ -47,16 +47,19 @@ const FindRestaurant = () => {
     const goToCart = () => {
         navigate("/cart");
     };
+    const goMap = () => {
+        navigate("/map");
+    };
     return (
         <div className="findRestaurant" >
             <div className="findRestaurant_Search">
                 <Avatar/>
                 <input type="text" placeholder="Enter Country" />
                 <input type="text" placeholder="Enter City" />
-                <img src={btn} alt="Search" />
+                <img onClick={goMap} src={btn} alt="Search" />
                 <div className="findRestaurant_SearchCart">
                     <div onClick={goToCart} >
-                        <img className="findRestaurant_SearchCartImg" src={cart} alt="" />
+                        <img className="findRestaurant_SearchCartImg" src={cartBtn} alt="" />
                         <span className="findRestaurant_SearchCartLength" >{cartLength}</span>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AdminPanel.css'
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../image/logo.png';
+import logo from '../image/FoodoOrdo Animated Logo.Png.Png';
 import btn from '../image/Capture.PNG';
 import apiClient from '../axios/apiClient'
 
@@ -27,8 +27,9 @@ const AdminPanel = () => {
   return (
     <div className="AdminPanel" >
             <div className="AdminPanel_Nav">
+                <Link to="/createRestaurant" className="AdminPanel_NavLink" >Restaurant Sign Up</Link>
                 <Link to="/createRestaurant" className="AdminPanel_NavLink" >Admin Sign Up</Link>
-                <button className="AdminPanel_NavLink btn" onClick={popUp} >Admin Sign In</button>
+                <button className="AdminPanel_NavLink btn" onClick={popUp} >Admin LogIn</button>
             </div>
             <div className="AdminPanel_PopUp">
                 <div className={sidebar ? "AdminPanel_NavSide active" : "AdminPanel_NavSide"}>

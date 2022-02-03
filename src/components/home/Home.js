@@ -1,18 +1,13 @@
 import React, { useState } from 'react';
 import './Home.css';
 import { Link, useNavigate } from 'react-router-dom';
-import logo from '../image/logo.png';
+import logo from '../image/FoodoOrdo Animated Logo.Png.Png';
 import btn from '../image/Capture.PNG';
-import apiClient from '../axios/apiClient'
 
 const Home = () => {
-    const [sidebar, setSidebar] = useState(false);
     const [counters, setCounters] = useState("all");
     const [city, setCity] = useState("all");
     const navigate = useNavigate();
-    const popUp = () => {
-        setSidebar(!sidebar);
-    };
     const findRestaurant = (e) => {
         e.preventDefault();
         navigate(`/findRestaurant/${counters}/${city}`);
